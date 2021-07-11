@@ -18,6 +18,7 @@ def limpiar(var):
         var = var.replace("]","")
         var = var.replace(")","")
         var = var.replace(",","")
+        var = var.replace("'","")
         return var
 
 #def recibir(sock, addr):
