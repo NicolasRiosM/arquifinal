@@ -333,6 +333,8 @@ while True:
         consulta0 = f"SELECT tipodeusuario FROM usuario where email='{email}';"
         tipousuario = consultar(consulta0)
         tipousuario = limpiar(tipousuario)
+        print(tipousuario)
+        print(type(tipousuario))
         if tipousuario != True:
             print("No tiene permiso para realizar esta accion")
             email_borrar = "-"
