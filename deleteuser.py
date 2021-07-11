@@ -39,14 +39,14 @@ while True:
     tipousuario = limpiar(tipousuario)
     #print(tipousuario)
     #print(type(tipousuario))
-    if tipousuario != "True" and data[1]=="-":
+    if tipousuario != True and data[1]=="-":
         menj = "no tiene permiso para borrar usuarios"
         menj='deltu'+str(menj)
         temp=llenado(len(menj))
         server.send(bytes(temp+menj,'utf-8'))
         print("envia3")
 
-    if tipousuario == "True":
+    if tipousuario == True:
         # seleccionar ID del usuario
         consulta1= f"SELECT idusuario FROM usuario where email='{data[1]}';"
         idusuario1 = consultar(consulta1)
