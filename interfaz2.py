@@ -327,7 +327,7 @@ while True:
         
         print(recibido[10:])
     if opcion=="6":
-        s.sendall(bytes('00010getsvdeltu','utf-8'))
+       
         email = email
                 # seleccionar tipo de usuario del usuario loggeado
         consulta0 = f"SELECT tipodeusuario FROM usuario where email='{email}';"
