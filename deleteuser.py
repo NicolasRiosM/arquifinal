@@ -38,8 +38,8 @@ while True:
     consulta0 = f"SELECT tipodeusuario FROM usuario where email='{data[0]}';"
     tipousuario = consultar(consulta0)
     tipousuario = limpiar(tipousuario)
-    #print(tipousuario)
-    #print(type(tipousuario))
+    print(tipousuario)
+    print(type(tipousuario))
     if tipousuario != 'True' and data[1]=="-":
         menj = "no tiene permiso para borrar usuarios"
         menj='deltu'+str(menj)
