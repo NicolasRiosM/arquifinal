@@ -335,10 +335,10 @@ while True:
         tipousuario = limpiar(tipousuario)
         print(tipousuario)
         print(type(tipousuario))
-        if tipousuario != 1:
+        if tipousuario != "1":
             print("No tiene permiso para realizar esta accion")
             email_borrar = "-"
-        if tipousuario == 1:
+        if tipousuario == "1":
             email_borrar = input("Escribir email para borrar su usuario: ")
                 #envio de datos
         datos = email + " " + email_borrar
