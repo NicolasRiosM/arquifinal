@@ -8,7 +8,7 @@ import hashlib
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(("localhost", 5000))
-s.send(bytes('00010sinitlogi7','utf-8'))
+s.send(bytes('00010sinitlog20','utf-8'))
 
 #def recibir(sock, addr):
 print("Ingresando a la cuenta de usuario")
