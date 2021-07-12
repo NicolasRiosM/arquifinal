@@ -57,7 +57,7 @@ while True:
     consulta1 = f"INSERT INTO usuariomascota (idusuario, idmascota) VALUES ('{idusuario1[0]}', '{idmascota1[0]}');"
     respuesta1 = modificar(consulta1)
     
-    if respuesta and respuesta1 == None:
+    if respuesta == None and respuesta1 == None:
         menj = "perro anadido con exito"
     else:
         menj = "no se añadio perrito"
