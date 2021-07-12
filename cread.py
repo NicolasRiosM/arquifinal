@@ -31,7 +31,8 @@ while True:
         email = email[10:]
         target = email.decode()
         email = target.split()
-        
+        print("hola")   
+    print("ffuera")
     datos = server.recv(4096)
     if datos.decode('utf-8').find('cread')!=-1:
         #decodificar el mensaje
@@ -44,7 +45,8 @@ while True:
     idusuario1 = consultar(consulta0)
     idusuario1 = limpiar(idusuario1)
     
-    #ingresa a la mascota 
+    #ingresa a la mascota
+    print(data)
     consulta = f"INSERT INTO mascota (nombre, edad, raza, descripcion) VALUES ('{data[0]}','{data[1]}', '{data[2]}','{data[3]}');"
     respuesta = modificar(consulta)
     
