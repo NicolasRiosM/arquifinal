@@ -60,8 +60,8 @@ while True:
 
         #enviar mensaje
         datos = email + " " + password 
-        aux = llenado(len(datos+'logi7'))
-        mensaje = aux + 'logi7' + datos
+        aux = llenado(len(datos+'log20'))
+        mensaje = aux + 'log20' + datos
         print(mensaje)
         s.send(bytes(mensaje,'utf-8'))
         

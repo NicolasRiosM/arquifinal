@@ -1,3 +1,4 @@
+
 import socket
 from conect import *
 import bcrypt
@@ -29,7 +30,7 @@ while True:
     datos=s.recv(4096)
     print(datos)
     
-    if datos.decode('utf-8').find('logi7')!=-1:
+    if datos.decode('utf-8').find('log20')!=-1:
         datos = datos[10:]
         target = datos.decode()
         data = target.split()
@@ -54,13 +55,13 @@ while True:
         if passw==pass2:
             val=1
             print("Ha ingresado con éxito a su cuenta")
-            respuesta2='logi7'+mail+passw
+            respuesta2='log20'+mail+passw
             print(respuesta2)
             temp=llenado(len(respuesta2))  
             s.sendall(bytes(temp+respuesta2,'utf-8'))
             
         else:
-            respuesta2 = 'logi7' + "no_existe_usuario"
+            respuesta2 = 'log20' + "no_existe_usuario"
             print(respuesta2)
             temp=llenado(len(respuesta2))  
             s.sendall(bytes(temp+respuesta2,'utf-8'))
