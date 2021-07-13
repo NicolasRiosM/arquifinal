@@ -10,7 +10,7 @@ from conect import *
 PORT = 5000
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.connect(("localhost",PORT))
-server.send(bytes('00010sinitcread','utf-8'))
+server.send(bytes('00010sinitcr34d','utf-8'))
 recibido=server.recv(4096)
 def limpiar(var):
         var = str(var)
@@ -26,7 +26,7 @@ print("Start Create_dog")
 while True:
     email = server.recv(4096)
     print(email)
-    if email.decode('utf-8').find('cread')!=-1:
+    if email.decode('utf-8').find('cr34d')!=-1:
         #decodificar el email
         email = email[10:]
         target = email.decode()
@@ -34,7 +34,7 @@ while True:
         
     
     datos = server.recv(4096)
-    if datos.decode('utf-8').find('cread')!=-1:
+    if datos.decode('utf-8').find('cr34d')!=-1:
         #decodificar el mensaje
         datos = datos[10:]
         target = datos.decode()
@@ -66,7 +66,7 @@ while True:
     
     
 
-    menj='cread'+str(menj)
+    menj='cr34d'+str(menj)
     #print(menj)
     temp=llenado(len(menj))  
     #print('tmp: ', temp)
