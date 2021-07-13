@@ -123,8 +123,8 @@ while True:
         
         email1 = email
         email2 = email1 + " "
-        temp2= llenado(len(email2+'cread'))
-        mesj= temp2+ 'cread' + email2
+        temp2= llenado(len(email2+'cr34d'))
+        mesj= temp2+ 'cr34d' + email2
         s.sendall(bytes(mesj, 'utf-8'))
 
                 
@@ -158,8 +158,8 @@ while True:
 
                 #envio de datos
         datos = nombre + " " + edad + " " + raza + " " + descripcion
-        temp = llenado(len(datos+'cread'))
-        mensaje = temp + 'cread' + datos
+        temp = llenado(len(datos+'cr34d'))
+        mensaje = temp + 'cr34d' + datos
         s.sendall(bytes(mensaje,'utf-8'))
                
 
