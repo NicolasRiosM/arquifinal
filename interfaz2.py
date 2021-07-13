@@ -65,13 +65,13 @@ while True:
         print(mensaje)
         s.send(bytes(mensaje,'utf-8'))
         
-        print("val")
+       
         
         
         recibido=s.recv(4096)
         
         
-        print("aka")
+        
         recibido = recibido[12:].decode()
         if recibido == "no_existe_usuario":
                 print("No se pudo acceder")
@@ -127,8 +127,8 @@ while True:
         mesj= temp2+ 'cread' + email2
         s.sendall(bytes(mesj, 'utf-8'))
 
-                # se debe estar con sesión iniciada de entes , luego mover esto al if de op 1
-                #s.sendall(bytes('00010getsvadddi','utf-8'))
+                
+                
 
                 #ID USUARIO:
         consulta0= f"SELECT idusuario FROM usuario WHERE email='{email1}';"
@@ -161,20 +161,19 @@ while True:
         temp = llenado(len(datos+'cread'))
         mensaje = temp + 'cread' + datos
         s.sendall(bytes(mensaje,'utf-8'))
-                #print(mensaje)
+               
 
         
         recibido = s.recv(4096)
         print(recibido[10:])
-        print("fin cliente")
+        
         
     
     if opcion=="2":
         s.sendall(bytes('00010getsveditd','utf-8'))
         email1 = email
 
-                # se debe estar con sesión iniciada de entes , luego mover esto al if de op 1
-                #s.sendall(bytes('00010getsvadddi','utf-8'))
+          
 
                 #ID USUARIO:
         consulta0= f"SELECT idusuario FROM usuario WHERE email='{email1}';"
@@ -212,7 +211,7 @@ while True:
         
         recibido = s.recv(4096)
         print(recibido[10:])
-        print("fin cliente")
+      
            
 
 
@@ -221,8 +220,7 @@ while True:
         s.sendall(bytes('00010getsvelimd','utf-8'))
         email1 = email
 
-                # se debe estar con sesión iniciada de entes , luego mover esto al if de op 1
-                #s.sendall(bytes('00010getsvadddi','utf-8'))
+             
 
                 #ID USUARIO:
         consulta0= f"SELECT idusuario FROM usuario WHERE email='{email1}';"
@@ -260,7 +258,7 @@ while True:
         
         consulta = f"SELECT mascota.nombre, mascota.edad, mascota.raza, mascota.descripcion, usuario.nombre, usuario.apellido, usuario.contacto, usuario.email, usuario.region FROM mascota, usuario, usuariomascota WHERE mascota.idmascota = usuariomascota.idmascota AND usuario.idusuario = usuariomascota.idusuario;"
         respuesta = consultar(consulta)
-                #print(respuesta)
+               
         for i in respuesta:
             nombreM = i[0]
             edad = i[1]
@@ -321,7 +319,7 @@ while True:
         temp = llenado(len(datos+'editu'))
         mensaje = temp + 'editu' + datos
         s.sendall(bytes(mensaje,'utf-8'))
-                #print(mensaje)
+               
 
         recibido = s.recv(4096)
         
@@ -354,7 +352,8 @@ while True:
         
     if(opcion == "0"):
         s.sendall(bytes('quit','utf-8'))
-        time.sleep(5)
+        time.sleep(1)
+        print("fin cliente")
         break
 
 print("ha cerrado terminal")

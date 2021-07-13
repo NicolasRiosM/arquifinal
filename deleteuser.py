@@ -21,7 +21,7 @@ def limpiar(var):
         var = var.replace("'","")
         return var
 
-#def recibir(sock, addr):
+
 print("Start delete_user")
 while True:
 
@@ -45,7 +45,7 @@ while True:
         menj='deltu'+str(menj)
         temp=llenado(len(menj))
         server.send(bytes(temp+menj,'utf-8'))
-        print("envia3")
+        print("enviado")
 
     if tipousuario == "1":
         # seleccionar ID del usuario
@@ -84,7 +84,7 @@ while True:
 
 
     #crear mensaje de respuesta
-    print("envia3")
+    print("enviado")
     a = consultar("SELECT * FROM usuario;")
     print(a)
 

@@ -21,7 +21,7 @@ def limpiar(var):
         var = var.replace(",","")
         return var
 
-#def recibir(server, addr):
+
 print("Start Create_dog")
 while True:
     email = server.recv(4096)
@@ -31,8 +31,8 @@ while True:
         email = email[10:]
         target = email.decode()
         email = target.split()
-        print("hola")   
-    print("ffuera")
+        
+    
     datos = server.recv(4096)
     if datos.decode('utf-8').find('cread')!=-1:
         #decodificar el mensaje
@@ -74,8 +74,8 @@ while True:
     server.send(bytes(temp+menj,'utf-8'))
 
 
-    #   crear mensaje de respuesta
-    print("envia3")
+    
+    print("enviado")
 
 server.close()
 '''while True:

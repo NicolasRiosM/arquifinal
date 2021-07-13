@@ -52,7 +52,7 @@ while True:
 
 
     #crear mensaje de respuesta
-    print("envia3")
+    print("enviado")
     a = consultar("SELECT * FROM usuario;")
     print(a)
 

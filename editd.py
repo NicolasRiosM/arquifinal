@@ -42,7 +42,7 @@ while True:
     #print('tmp + respuesta:',temp+menj)
     server.send(bytes(temp+menj,'utf-8'))
     
-    print("envia3")
+    print("enviado")
     
 sock.close()
 '''while True:

@@ -26,7 +26,7 @@ def limpiar(var):
 
 
 while True:
-    print("aqui")
+   
     datos=s.recv(4096)
     print(datos)
     
@@ -46,7 +46,7 @@ while True:
         respuesta=limpiar(respuesta)
         enchash = hashlib.md5(password.encode())#aqui
         pass2=enchash.hexdigest()
-        print("aca abajo contras")
+        
         
         mail = email
         passw = respuesta 

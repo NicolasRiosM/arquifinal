@@ -42,7 +42,7 @@ while True:
     server.send(bytes(temp+menj,'utf-8'))
 
     #crear mensaje de respuesta
-    print("envia3")
+    print("enviado")
 sock.close()
 '''while True:
 	sock, addr = server.accept()

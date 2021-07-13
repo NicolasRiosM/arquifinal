@@ -48,7 +48,7 @@ while True:
 
 
     #crear mensaje de respuesta
-    print("envia3")
+    print("enviado")
 
     
 sock.close()
